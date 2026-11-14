@@ -1,0 +1,19 @@
+body {
+    font-size: 20px;
+    padding: 5rem;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+th, td {
+    padding: 0.25rem;
+     border: 1px solid black;
+}
+table {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+     border: 1px solid black;
+}
+.calendar td {
+    vertical-align: top;
+}
+caption{color:darkred}
