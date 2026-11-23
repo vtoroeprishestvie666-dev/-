@@ -1,0 +1,55 @@
+name: Deploy homework branches to GitHub Pages
+
+on:
+  push:
+    branches:
+      - "homework-*"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build all homework branches
+        run: |
+          rm -rf dist
+          mkdir -p dist
+          git fetch origin '+refs/heads/*:refs/remotes/origin/*'
+
+          for ref in $(git for-each-ref --format='%(refname:short)' refs/remotes/origin/); do
+            case "$ref" in
+              origin/homework-*)
+                branch="${ref#origin/}"
+                mkdir -p "dist/$branch"
+                git archive "$ref" | tar -x -C "dist/$branch"
+                ;;
+            esac
+          done
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
