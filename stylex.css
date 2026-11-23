@@ -1,49 +1,50 @@
 @font-face {
-    font-family: "Sofia Sans";
-    src: url("./fonts/SofiaSansExtraCondensed-VariableFont_wght.ttf") format("truetype");
-    font-weight: 100 1000;
-    font-style: normal;
+  font-family: "Sofia Sans";
+  src: url("./fonts/SofiaSansExtraCondensed-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 1000;
+  font-style: normal;
 }
 body {
-    text-align: center;
-    color: #909090;
-    font-family: "Sofia Sans", sans-serif;
+  text-align: center;
+  color: #909090;
+  font-family: "Sofia Sans", sans-serif;
 }
 .card {
-    width: 400px;
-    padding: 16px;
-    border-radius: 16px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    box-shadow: 0 0 30px #32326440;
+  width: 400px;
+  padding: 16px;
+  border-radius: 16px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  box-shadow: 0 0 30px #32326440;
 }
-.card h2 {   
-    font-weight: 800;
+.card h2 {
+  font-weight: 800;
 }
 .card h3 {
-    font-weight: 600;
-}   
+  font-weight: 600;
+}
 .card p {
-    font-weight: 400;
+  font-weight: 400;
 }
 .card h2,
 .card h3,
 .card h1 {
-    color: #333333;
+  color: #333333;
 }
 
 .card p {
-    color: #909090;
+  color: #909090;
 }
 
 .card a {
-    display: block;
-    text-align: right;
-    font-size: 24px;
-    color: #5d5dff;
-    text-decoration: none;
+  display: block;
+  text-align: right;
+  font-size: 24px;
+  color: #5d5dff;
+  text-decoration: none;
 }
 .card img {
-    width: 100%;
-    border-radius: 8px;
+  width: 100%;
+  border-radius: 8px;
 }
