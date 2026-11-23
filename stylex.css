@@ -1,50 +1,222 @@
-@font-face {
-  font-family: "Sofia Sans";
-  src: url("./fonts/SofiaSansExtraCondensed-VariableFont_wght.ttf")
-    format("truetype");
-  font-weight: 100 1000;
-  font-style: normal;
-}
-body {
-  text-align: center;
-  color: #909090;
-  font-family: "Sofia Sans", sans-serif;
-}
-.card {
-  width: 400px;
-  padding: 16px;
-  border-radius: 16px;
-  margin: 0 auto;
+* {
   box-sizing: border-box;
-  box-shadow: 0 0 30px #32326440;
 }
-.card h2 {
-  font-weight: 800;
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #f9f9f9;
+  width: 1920px;
+  min-height: 2408px;
 }
-.card h3 {
-  font-weight: 600;
+
+header {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding-top: 78px;
 }
-.card p {
+
+.nav {
+  display: flex;
+  gap: 40px;
+}
+.nav-link {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
   font-weight: 400;
-}
-.card h2,
-.card h3,
-.card h1 {
-  color: #333333;
-}
-
-.card p {
-  color: #909090;
-}
-
-.card a {
-  display: block;
-  text-align: right;
-  font-size: 24px;
-  color: #5d5dff;
+  color: #000000;
   text-decoration: none;
+  text-transform: uppercase;
 }
-.card img {
+
+.nav-link--active {
+  font-weight: 500;
+  color: #34547a;
+}
+.first-screen__content h1 {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.64;
+  color: #000000;
+}
+.first-screen__content p {
+  max-width: 540px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.64;
+  color: #727272;
+}
+.first-screen__button {
+  width: 226px;
+  height: 59px;
+  background-color: #34547a;
+  color: #ffffff;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.first-screen {
+  min-height: 700px;
+  background-color: #eeeff1;
+  padding-top: 195px;
+}
+.about {
+  background-color: #ffffff;
+  padding: 100px 0;
+  text-align: center;
+}
+.about h2 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  color: #000000;
+}
+.about p {
+  max-width: 540px;
+  margin: 40px auto 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.64;
+  text-align: center;
+  color: #727272;
+}
+.about {
+  background-color: #ffffff;
+  padding: 100px 0;
+  text-align: center;
+}
+.projects {
+  min-height: 250px;
+  background-color: #34547a;
+  display: flex;
+  align-items: center;
+}
+
+.projects__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1091px;
+}
+
+.project-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 141px;
+  height: 50px;
+  color: #ffffff;
+}
+
+.project-card__icon {
+  width: 50px;
+  height: 50px;
+}
+
+.project-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-card h3 {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #ffffff;
+}
+
+.project-card p {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 164%;
+  color: #ffffff;
+}
+.process {
+  background-color: #eeeff1;
+  padding: 100px 0;
+}
+
+.process__content {
+  max-width: 540px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.process__content h2 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #000000;
+}
+
+.process__content p {
+  margin: 40px 0 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 164%;
+  color: #727272;
+}
+
+.process__video {
+  width: 1110px;
+  height: 600px;
+  position: relative;
+}
+
+.process__image {
   width: 100%;
-  border-radius: 8px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.process__play {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.process__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #000000a6;
+}
+.footer {
+  height: 164px;
+  background-color: #34547a;
+  padding: 60px 0;
+}
+
+.footer__text h3 {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #ffffff;
+}
+
+.footer__text p {
+  margin: 20px 0 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 164%;
+  color: #ffffff;
 }
